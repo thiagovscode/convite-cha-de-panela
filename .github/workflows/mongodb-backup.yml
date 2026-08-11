@@ -1,0 +1,91 @@
+name: MongoDB Backup
+
+on:
+  schedule:
+    # 03:00 Brasilia Time (UTC-3) = 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Instalar MongoDB Database Tools
+        run: |
+          wget https://fastdl.mongodb.org/tools/db/mongodb-database-tools-ubuntu2204-x86_64-100.11.0.tgz
+          tar -zxvf mongodb-database-tools-*.tgz
+          sudo cp mongodb-database-tools-*/bin/* /usr/local/bin/
+          rm -rf mongodb-database-tools-*
+      
+      - name: Gerar Timestamp e Nome do Arquivo
+        id: date
+        run: |
+          DATE=$(date +'%Y-%m-%d-%H-%M')
+          echo "filename=mongodb-backup-$DATE.archive.gz" >> $GITHUB_ENV
+          echo "date_br=$(TZ='America/Sao_Paulo' date +'%d/%m/%Y %H:%M')" >> $GITHUB_ENV
+          
+      - name: Executar mongodump
+        run: |
+          echo "✓ Conectando ao MongoDB e gerando backup..."
+          mongodump --uri="${{ secrets.MONGODB_URI }}" --archive=${{ env.filename }} --gzip
+          echo "✓ Backup gerado e compactado com sucesso!"
+          
+      - name: Calcular Tamanho do Backup
+        id: size
+        run: |
+          SIZE=$(du -sh ${{ env.filename }} | cut -f1)
+          echo "filesize=$SIZE" >> $GITHUB_ENV
+          echo "✓ Tamanho do backup: $SIZE"
+
+      - name: Enviar E-mail com Anexo (Sucesso)
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_HOST }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: 'Backup MongoDB — Chá da Tai — ${{ env.date_br }}'
+          body: |
+            Backup automático do MongoDB realizado com sucesso.
+            
+            Data: ${{ env.date_br }}
+            Banco: Chá de Panela (Tai)
+            Arquivo: ${{ env.filename }}
+            Tamanho: ${{ env.filesize }}
+            
+            O backup está anexado a este e-mail.
+          to: ${{ secrets.BACKUP_EMAIL_TO }}
+          from: ${{ secrets.BACKUP_EMAIL_FROM }}
+          attachments: ${{ env.filename }}
+        continue-on-error: true
+        id: send_mail
+
+      - name: Enviar E-mail de Falha (Se o anexo for muito grande)
+        if: steps.send_mail.outcome == 'failure'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.SMTP_HOST }}
+          server_port: ${{ secrets.SMTP_PORT }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: 'FALHA: Backup MongoDB — Chá da Tai — ${{ env.date_br }}'
+          body: |
+            O backup automático do MongoDB foi gerado com sucesso, mas NÃO pôde ser anexado devido ao limite de tamanho do provedor de e-mail.
+            
+            Tamanho do arquivo gerado: ${{ env.filesize }}
+            
+            Recomendamos migrar a estratégia de backup para um serviço de armazenamento externo.
+          to: ${{ secrets.BACKUP_EMAIL_TO }}
+          from: ${{ secrets.BACKUP_EMAIL_FROM }}
+          
+      - name: Marcar workflow como falha se o e-mail principal falhou
+        if: steps.send_mail.outcome == 'failure'
+        run: |
+          echo "✗ Ocorreu um erro ao enviar o e-mail principal (provavelmente devido ao tamanho do anexo)."
+          exit 1
+          
+      - name: Limpar Arquivos Temporários
+        if: always()
+        run: |
+          rm -f *.archive.gz
+          echo "✓ Limpeza concluída. Backup finalizado."
