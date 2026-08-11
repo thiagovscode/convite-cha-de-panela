@@ -13,8 +13,8 @@ import { useState, useCallback, useEffect } from 'react';
 import type { Presente } from '../types';
 import type { Categoria } from '../types';
 
-// URL base da API — o Vite proxy redireciona para :8080 localmente, em prod usa a variável
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
+// URL base da API
+const API_BASE = import.meta.env.VITE_API_URL || '';
 
 interface UseGiftsReturn {
   presentes: Presente[];
@@ -49,7 +49,7 @@ export function useGifts(): UseGiftsReturn {
       setIsLoading(true);
       setError(null);
 
-      const res = await fetch(`${API_BASE}/presentes`);
+      const res = await fetch(`${API_BASE}/api/presentes`);
       if (!res.ok) throw new Error(`Servidor respondeu ${res.status}`);
 
       const json = await res.json();
@@ -94,7 +94,7 @@ export function useGifts(): UseGiftsReturn {
   const reserveGift = useCallback(async (id: number, guestName: string) => {
     setReserveError(null);
     try {
-      const res = await fetch(`${API_BASE}/presentes/${id}/reservar`, {
+      const res = await fetch(`${API_BASE}/api/presentes/${id}/reservar`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ guestName }),
