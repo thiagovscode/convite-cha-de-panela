@@ -10,8 +10,7 @@ import PhotoFrame from './PhotoFrame';
 import {
   OrnamentalBorder,
   GenoviaPostageStamp,
-  RoyalWaxSeal,
-  GenoviaCrest
+  RoyalWaxSeal
 } from './DecorativeElements';
 
 const fadeUp = {

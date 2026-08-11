@@ -5,7 +5,7 @@
 
 import { motion } from 'framer-motion';
 import { conviteConfig } from '../config/convite';
-import { OrnamentalDivider, GenoviaCrest, HeraldricStar, GenoviaPostageStamp, PearSketch } from './DecorativeElements';
+import { OrnamentalDivider, HeraldricStar, GenoviaPostageStamp, PearSketch } from './DecorativeElements';
 
 export default function Schedule() {
   const cfg = conviteConfig; // ← vem do config/convite.ts
