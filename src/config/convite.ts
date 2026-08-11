@@ -29,15 +29,15 @@ export const conviteConfig: ConviteConfig = {
   linkMaps: 'https://maps.google.com/',
 
   // ── FOTOS ───────────────────────────────────────────────
-  //  Coloque as fotos em: public/images/
+  //  Coloque as fotos em: public./images/
   //  e atualize os caminhos abaixo
-  fotoNoiva: '/images/noiva.jpg',
-  fotoCasal: '/images/casal.jpg',
+  fotoNoiva: './images/noiva.jpg',
+  fotoCasal: './images/casal.jpg',
   galeria: [
-    '/images/foto1.jpg',
-    '/images/foto2.jpg',
-    '/images/foto3.jpg',
-    '/images/foto4.jpg',
+    './images/foto1.jpg',
+    './images/foto2.jpg',
+    './images/foto3.jpg',
+    './images/foto4.jpg',
   ],
 
   // ── TEXTOS ──────────────────────────────────────────────
@@ -116,7 +116,7 @@ export const conviteConfig: ConviteConfig = {
       hora: 'A partir das XXhXX',
       titulo: 'Chegada & Recepção',
       descricao: 'As convidadas chegam e são recebidas com carinho',
-      imagem: '/images/schedule_arrival.jpg',
+      imagem: './images/schedule_arrival.jpg',
       imageType: 'default',
     },
     {
@@ -124,7 +124,7 @@ export const conviteConfig: ConviteConfig = {
       hora: 'XXhXX',
       titulo: 'Café da Tarde',
       descricao: 'Um chá da tarde caprichado para começar a celebração',
-      imagem: '/images/schedule_tea.jpg',
+      imagem: './images/schedule_tea.jpg',
       imageType: 'default',
     },
     {
@@ -132,7 +132,7 @@ export const conviteConfig: ConviteConfig = {
       hora: 'XXhXX',
       titulo: 'Abertura dos Presentes',
       descricao: 'Momento especial de abrir cada presente com emoção',
-      imagem: '/images/schedule_gifts.jpg',
+      imagem: './images/schedule_gifts.jpg',
       imageType: 'default',
     },
     {
@@ -140,7 +140,7 @@ export const conviteConfig: ConviteConfig = {
       hora: 'XXhXX',
       titulo: 'Brincadeiras & Games',
       descricao: 'Muita diversão e gargalhadas garantidas!',
-      imagem: '/images/schedule_makeover.jpg',
+      imagem: './images/schedule_makeover.jpg',
       imageType: 'default',
     },
     {
@@ -148,7 +148,7 @@ export const conviteConfig: ConviteConfig = {
       hora: 'XXhXX',
       titulo: 'Fotos & Memórias',
       descricao: 'Registros do dia mais especial antes do grande dia',
-      imagem: '/images/schedule_photos.jpg',
+      imagem: './images/schedule_photos.jpg',
       imageType: 'default',
     },
     {
@@ -156,7 +156,7 @@ export const conviteConfig: ConviteConfig = {
       hora: 'XXhXX',
       titulo: 'Celebração Final',
       descricao: 'Um brinde especial para a noiva e sua nova vida!',
-      imagem: '/images/schedule_toast.jpg',
+      imagem: './images/schedule_toast.jpg',
       imageType: 'default',
     },
   ],

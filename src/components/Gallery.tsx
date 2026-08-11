@@ -129,7 +129,7 @@ export default function Gallery() {
   const { galeria, casal } = conviteConfig; // ← vem do config/convite.ts
 
   // Preenche com fotos da galeria, repetindo se necessário
-  const photos = frameStyles.map((_, i) => galeria[i % galeria.length] || '/images/foto1.jpg');
+  const photos = frameStyles.map((_, i) => galeria[i % galeria.length] || './images/foto1.jpg');
 
   return (
     <section
