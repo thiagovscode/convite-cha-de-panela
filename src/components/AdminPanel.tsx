@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Crown, FlowerOrnament } from './DecorativeElements';
+import { useState } from 'react';
+import { Crown } from './DecorativeElements';
 
 const API_BASE = import.meta.env.VITE_API_URL || '';
 
@@ -30,7 +30,7 @@ export default function AdminPanel() {
   const [presentes, setPresentes] = useState<AdminPresente[]>([]);
   const [rsvps, setRsvps] = useState<Rsvp[]>([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error] = useState<string | null>(null);
   
   // Authentication state
   const [password, setPassword] = useState('');
