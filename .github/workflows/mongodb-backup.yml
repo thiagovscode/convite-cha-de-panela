@@ -9,6 +9,7 @@ on:
 jobs:
   backup:
     runs-on: ubuntu-latest
+    environment: prod
     steps:
       - name: Instalar MongoDB Database Tools
         run: |
