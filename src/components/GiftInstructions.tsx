@@ -5,30 +5,31 @@
 
 import { motion } from 'framer-motion';
 import { OrnamentalDivider, Crown } from './DecorativeElements';
+import { Gift, Palette, MousePointerClick, CheckCircle } from 'lucide-react';
 
 // ── PASSOS — podem ser movidos para config/convite.ts se necessário
 const steps = [
   {
     number: '01',
-    icon: '🎁',
+    icon: <Gift size={32} color="#C9A86A" strokeWidth={1.5} />,
     title: 'Escolha um presente',
     description: 'Navegue pela nossa lista de presentes e encontre o que mais combina com você!',
   },
   {
     number: '02',
-    icon: '🎨',
+    icon: <Palette size={32} color="#C9A86A" strokeWidth={1.5} />,
     title: 'Confira a cor disponível',
     description: 'Cada presente tem uma cor indicada. Verifique se está disponível na paleta.',
   },
   {
     number: '03',
-    icon: '💝',
+    icon: <MousePointerClick size={32} color="#C9A86A" strokeWidth={1.5} />,
     title: 'Clique no presente',
     description: 'Clique no card do presente para ver todos os detalhes e informações.',
   },
   {
     number: '04',
-    icon: '✨',
+    icon: <CheckCircle size={32} color="#C9A86A" strokeWidth={1.5} />,
     title: 'Confirme sua escolha',
     description: 'Clique em "Quero este presente" para reservar e garantir o seu!',
   },

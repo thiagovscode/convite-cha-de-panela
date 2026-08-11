@@ -248,7 +248,11 @@ export const HeartIcon: React.FC<{ size?: number; color?: string; className?: st
   </svg>
 );
 
-export const Crown = GenoviaCrest;
+export const Crown: React.FC<{ size?: number; color?: string; className?: string }> = ({ size = 24, color = '#C9A86A', className = '' }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    <path d="M2 20h20M4 16l3-9 5 5 5-5 3 9H4z" />
+  </svg>
+);
 export const OrnamentalDivider = VintageArabesco;
 export const FlowerOrnament = PearSketch;
 export const StarSparkle = HeraldricStar;

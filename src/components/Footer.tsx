@@ -73,7 +73,7 @@ export default function Footer() {
             {cfg.noiva}
           </h2>
           <p className="font-serif text-2xl text-rosa" style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}>
-            💗
+            <HeartIcon size={12} color="#D4B4B4" />
           </p>
         </motion.div>
 

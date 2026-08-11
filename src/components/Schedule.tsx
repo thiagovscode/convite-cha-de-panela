@@ -5,7 +5,7 @@
 
 import { motion } from 'framer-motion';
 import { conviteConfig } from '../config/convite';
-import { OrnamentalDivider, GenoviaCrest, HeraldricStar } from './DecorativeElements';
+import { OrnamentalDivider, GenoviaCrest, HeraldricStar, GenoviaPostageStamp, PearSketch } from './DecorativeElements';
 
 export default function Schedule() {
   const cfg = conviteConfig; // ← vem do config/convite.ts
@@ -24,8 +24,7 @@ export default function Schedule() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            {/* Topo vintage e temático de Genovia */}
-            <GenoviaCrest size={50} color="#B89947" className="mx-auto mb-4 opacity-80" />
+            <OrnamentalDivider color="#B89947" className="mx-auto mb-6" />
             
             <p className="font-sans text-xs font-semibold tracking-[0.3em] text-[#B89947] uppercase mb-3">
               O DIA DA CELEBRAÇÃO
@@ -129,6 +128,14 @@ export default function Schedule() {
                 </motion.div>
               );
             })}
+          </div>
+          
+          {/* Decorações do filme soltas na linha do tempo */}
+          <div className="absolute top-1/3 left-4 md:left-12 opacity-40 z-0">
+            <GenoviaPostageStamp size={60} rotation={-15} />
+          </div>
+          <div className="absolute bottom-1/4 right-4 md:right-12 opacity-30 z-0">
+            <PearSketch size={45} color="#B89947" />
           </div>
         </div>
       </div>

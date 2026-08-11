@@ -5,6 +5,7 @@
 
 import { motion } from 'framer-motion';
 import type { Presente } from '../types';
+import { HeartIcon } from './DecorativeElements';
 
 interface GiftCardProps {
   presente: Presente;
@@ -69,7 +70,13 @@ export default function GiftCard({ presente, onClick }: GiftCardProps) {
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-marrom/20 text-4xl">
-            🎁
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="8" width="18" height="14" rx="2" ry="2"/>
+              <line x1="12" y1="8" x2="12" y2="22"/>
+              <path d="M19 8V5c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2v3"/>
+              <path d="M12 8c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2"/>
+              <path d="M12 8c0-1.1-.9-2-2-2H7c-1.1 0-2 .9-2 2"/>
+            </svg>
           </div>
         )}
 
@@ -81,7 +88,7 @@ export default function GiftCard({ presente, onClick }: GiftCardProps) {
               className="w-12 h-12 rounded-full flex items-center justify-center"
               style={{ background: 'rgba(201,168,106,0.15)', border: '2px solid rgba(201,168,106,0.4)' }}
             >
-              <span className="text-xl">💗</span>
+              <HeartIcon size={20} color="#C9A86A" />
             </div>
           </div>
         )}
@@ -122,7 +129,7 @@ export default function GiftCard({ presente, onClick }: GiftCardProps) {
         <div className="mt-3 pt-3 border-t border-rosa/15">
           {isSoldOut ? (
             <p className="font-sans text-xs text-center text-marrom/40 font-light">
-              Este presente já foi reservado 💗
+              Este presente já foi reservado <HeartIcon size={12} color="#D4B4B4" className="inline mb-0.5 ml-1" />
             </p>
           ) : (
             <p className="font-sans text-xs text-center text-dourado font-medium tracking-wide">

@@ -6,6 +6,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Presente } from '../types';
+import { HeartIcon } from './DecorativeElements';
 import { Crown, FlowerOrnament } from './DecorativeElements';
 
 interface GiftModalProps {
@@ -181,7 +182,9 @@ export default function GiftModal({
                       </>
                     ) : (
                       <>
-                        <p className="font-serif text-xl text-marrom mb-1">Presente reservado! 💗</p>
+                        <p className="font-serif text-xl text-marrom mb-1">
+                          Presente reservado! <HeartIcon size={20} color="#D4B4B4" className="inline ml-1" />
+                        </p>
                         <p className="font-sans text-xs text-marrom/50">Obrigada pela sua escolha carinhosa!</p>
                       </>
                     )}
@@ -200,7 +203,7 @@ export default function GiftModal({
                           onClick={() => setShowInput(true)}
                           className="btn-primary w-full text-sm justify-center"
                         >
-                          <span>💗</span>
+                          <HeartIcon size={20} color="#C9A86A" />
                           VOU DAR ESTE PRESENTE
                         </motion.button>
                       ) : (

@@ -6,7 +6,7 @@
 import { motion } from 'framer-motion';
 import { conviteConfig } from '../config/convite';
 import PhotoFrame from './PhotoFrame';
-import { OrnamentalDivider, FlowerOrnament, ArabescoLeft, ArabescoRight } from './DecorativeElements';
+import { HeartIcon, OrnamentalDivider, FlowerOrnament, ArabescoLeft, ArabescoRight } from './DecorativeElements';
 
 export default function MessageSection() {
   const cfg = conviteConfig; // ← vem do config/convite.ts
@@ -112,7 +112,7 @@ export default function MessageSection() {
               className="mt-12 font-serif text-2xl text-dourado"
               style={{ fontFamily: "'Dancing Script', 'Cormorant Garamond', cursive" }}
             >
-              Com amor, {cfg.noiva} 💗
+              Com amor, {cfg.noiva} <HeartIcon size={24} color="#D4B4B4" className="inline mb-1 ml-1" />
             </motion.p>
 
             <motion.div

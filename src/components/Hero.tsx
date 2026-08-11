@@ -8,13 +8,10 @@ import { motion } from 'framer-motion';
 import { conviteConfig } from '../config/convite';
 import PhotoFrame from './PhotoFrame';
 import {
-  GenoviaCrest,
-  MiaTiara,
-  RoyalWaxSeal,
+  OrnamentalBorder,
   GenoviaPostageStamp,
-  HandwrittenNote,
-  PearSketch,
-  OrnamentalBorder
+  RoyalWaxSeal,
+  GenoviaCrest
 } from './DecorativeElements';
 
 const fadeUp = {
@@ -48,7 +45,7 @@ export default function Hero() {
         <GenoviaPostageStamp size={70} rotation={0} />
       </motion.div>
 
-      {/* Selo de cera no canto superior esquerdo (fechando uma dobra imaginária) */}
+      {/* Selo de cera no canto superior esquerdo */}
       <motion.div 
         className="absolute top-10 left-8 md:top-14 md:left-20 z-10"
         initial={{ opacity: 0, scale: 0.5 }}
@@ -58,28 +55,10 @@ export default function Hero() {
         <RoyalWaxSeal size={55} />
       </motion.div>
 
-      {/* Anotação manuscrita estilo Mia */}
-      <motion.div
-        className="absolute top-24 left-12 md:top-32 md:left-32 z-20 hidden sm:block animate-ink"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2, delay: 1.5 }}
-      >
-        <HandwrittenNote text="Princess lessons..." angle={-10} type="apple" className="text-xl opacity-60" />
-      </motion.div>
-
       {/* ── CONTEÚDO CENTRAL ─────────────────────────────── */}
       <div className="relative z-10 flex flex-col items-center text-center max-w-2xl mx-auto mt-16 md:mt-10">
 
-        {/* Brasão central em estilo carimbo (tinta sépia) */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.7 }}
-          transition={{ duration: 2 }}
-          className="mb-8"
-        >
-          <GenoviaCrest size={65} color="#3A2626" />
-        </motion.div>
+
 
         {/* Frase introdutória manuscrita */}
         <motion.div
@@ -89,7 +68,7 @@ export default function Hero() {
           variants={fadeUp}
           className="mb-6"
         >
-          <HandwrittenNote text={cfg.fraseHero} angle={-3} type="script" className="text-3xl text-marrom" />
+          <p className="font-script text-3xl text-marrom -rotate-3">{cfg.fraseHero}</p>
         </motion.div>
 
         {/* Título Principal (Elegante e Serifado) */}
@@ -116,13 +95,7 @@ export default function Hero() {
           transition={{ duration: 2, delay: 0.8, ease: 'easeOut' }}
           className="mb-10 mt-8 relative"
         >
-          {/* Tiara sobreposta delicadamente no locket */}
-          <motion.div className="absolute -top-12 left-1/2 -translate-x-1/2 z-20"
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1.5 }}>
-            <MiaTiara width={120} />
-          </motion.div>
+
 
           <PhotoFrame
             src={cfg.fotoNoiva}
@@ -163,17 +136,6 @@ export default function Hero() {
           <p className="font-sans text-xs font-medium tracking-[0.3em] mt-1 text-[#B89947] uppercase">
             às {cfg.horario}
           </p>
-        </motion.div>
-
-        {/* ── EASTER EGG (Rodapé) ─────────────────────────── */}
-        <motion.div
-          className="absolute bottom-8 right-8 md:bottom-12 md:right-16 z-20 flex flex-col items-end opacity-80"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.8 }}
-          transition={{ duration: 2, delay: 2 }}
-        >
-          <HandwrittenNote text="P.S.: Shut up!" angle={-8} type="apple" className="text-sm opacity-70 mb-1" />
-          <PearSketch size={30} className="mr-4 opacity-50" />
         </motion.div>
 
         {/* ── SCROLL CTA ──────────────────────────────────── */}
