@@ -198,25 +198,52 @@ export const HandwrittenNote: React.FC<{ text: string; className?: string; angle
   </div>
 );
 
-// ── 6. EASTER EGG: PERA DE GENOVIA (Sketch) ────────────────────────
-export const PearSketch: React.FC<{ size?: number; color?: string; className?: string }> = ({ size = 40, color = '#3A2626', className = '' }) => (
-  <svg width={size} height={size * 1.3} viewBox="0 0 50 65" className={className}>
-    {/* Desenho imitando lápis/tinta */}
-    <path 
-      d="M25 15 C 35 15, 40 30, 42 42 C 45 55, 35 60, 25 60 C 15 60, 5 55, 8 42 C 10 30, 15 15, 25 15 Z" 
-      fill="none" stroke={color} strokeWidth="1.2" strokeOpacity="0.7" 
+// ── 6. PANELA ELEGANTE (Sketch) ─────────────────────────────────────
+export const PotSketch: React.FC<{ size?: number; color?: string; className?: string }> = ({ size = 40, color = '#6B2D3E', className = '' }) => (
+  <svg width={size} height={size * 1.1} viewBox="0 0 60 66" fill="none" className={className}>
+    {/* Tampa */}
+    <path
+      d="M16 20 Q30 14 44 20"
+      stroke={color} strokeWidth="1.4" strokeOpacity="0.75" strokeLinecap="round"
     />
-    <path 
-      d="M24 16 C 34 16, 39 31, 41 43 C 44 54, 34 59, 25 59 C 16 59, 6 54, 9 43 C 11 31, 16 16, 24 16 Z" 
-      fill="none" stroke={color} strokeWidth="0.5" strokeOpacity="0.4" 
+    <path
+      d="M22 20 Q30 16 38 20"
+      stroke={color} strokeWidth="0.6" strokeOpacity="0.4" strokeLinecap="round"
     />
-    {/* Caule */}
-    <path d="M25 15 Q25 5 32 2" fill="none" stroke="#3A2626" strokeWidth="1.5" strokeOpacity="0.8" />
-    <path d="M25 15 Q26 5 33 3" fill="none" stroke="#3A2626" strokeWidth="0.5" strokeOpacity="0.5" />
-    {/* Folha */}
-    <path d="M30 10 Q45 5 45 15 Q35 18 30 10 Z" fill="none" stroke="#3A2626" strokeWidth="1" strokeOpacity="0.7" />
-    {/* Sombreamento hachurado (cross-hatching) */}
-    <path d="M12 40 L18 45 M10 45 L16 50 M14 53 L20 56 M35 55 L40 50" stroke="#3A2626" strokeWidth="0.5" strokeOpacity="0.4" />
+    {/* Puxador da tampa */}
+    <path
+      d="M27 20 L27 16 Q30 13 33 16 L33 20"
+      stroke={color} strokeWidth="1.3" strokeOpacity="0.8" strokeLinecap="round" strokeLinejoin="round"
+    />
+    {/* Corpo da panela */}
+    <path
+      d="M14 22 Q12 38 13 48 Q14 56 30 57 Q46 56 47 48 Q48 38 46 22 Z"
+      stroke={color} strokeWidth="1.4" strokeOpacity="0.75"
+    />
+    <path
+      d="M17 24 Q15 39 16 48 Q17 54 30 55 Q43 54 44 48 Q45 39 43 24"
+      stroke={color} strokeWidth="0.5" strokeOpacity="0.35"
+    />
+    {/* Alça esquerda */}
+    <path
+      d="M14 28 Q6 28 6 34 Q6 40 14 40"
+      stroke={color} strokeWidth="1.4" strokeOpacity="0.75" strokeLinecap="round"
+    />
+    {/* Alça direita */}
+    <path
+      d="M46 28 Q54 28 54 34 Q54 40 46 40"
+      stroke={color} strokeWidth="1.4" strokeOpacity="0.75" strokeLinecap="round"
+    />
+    {/* Sombreamento delicado */}
+    <path
+      d="M20 30 L20 48 M25 28 L25 50 M35 28 L35 50 M40 30 L40 48"
+      stroke={color} strokeWidth="0.4" strokeOpacity="0.18"
+    />
+    {/* Brilho superior */}
+    <path
+      d="M20 25 Q25 23 30 24"
+      stroke={color} strokeWidth="0.5" strokeOpacity="0.3" strokeLinecap="round"
+    />
   </svg>
 );
 
