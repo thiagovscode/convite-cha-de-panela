@@ -4,7 +4,7 @@
 // ============================================================
 
 import { motion } from 'framer-motion';
-import { HeartIcon, StarSparkle, FlowerOrnament, SpoonSketch, CuttingBoardSketch, UtensilsSketch } from './DecorativeElements';
+import { FlowerOrnament, SpoonSketch, CuttingBoardSketch, UtensilsSketch } from './DecorativeElements';
 
 interface FloatingItem {
   id: number;
