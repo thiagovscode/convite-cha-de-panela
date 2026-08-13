@@ -247,7 +247,53 @@ export const PotSketch: React.FC<{ size?: number; color?: string; className?: st
   </svg>
 );
 
-// ── 7. ARABESCOS VINTAGE SIMPLES ──────────────────────────────
+// ── 7. COLHER ELEGANTE (Sketch) ──────────────────────────────────────
+export const SpoonSketch: React.FC<{ size?: number; color?: string; className?: string }> = ({ size = 40, color = '#6B2D3E', className = '' }) => (
+  <svg width={size * 0.35} height={size} viewBox="0 0 22 70" fill="none" className={className}>
+    <ellipse cx="11" cy="12" rx="7" ry="9" stroke={color} strokeWidth="1.3" strokeOpacity="0.75" />
+    <ellipse cx="11" cy="12" rx="4.5" ry="6" stroke={color} strokeWidth="0.5" strokeOpacity="0.3" />
+    <path d="M8 9 Q10 7 13 9" stroke={color} strokeWidth="0.5" strokeOpacity="0.25" strokeLinecap="round" />
+    <path d="M11 21 Q10.5 40 11 62" stroke={color} strokeWidth="1.3" strokeOpacity="0.75" strokeLinecap="round" />
+    <path d="M12 21 Q11.5 40 12 62" stroke={color} strokeWidth="0.4" strokeOpacity="0.3" strokeLinecap="round" />
+    <path d="M10 60 Q11 65 12 60" stroke={color} strokeWidth="1" strokeOpacity="0.6" strokeLinecap="round" />
+  </svg>
+);
+
+// ── 8. TÁBUA DE CORTE (Sketch) ───────────────────────────────────────
+export const CuttingBoardSketch: React.FC<{ size?: number; color?: string; className?: string }> = ({ size = 40, color = '#6B2D3E', className = '' }) => (
+  <svg width={size} height={size * 0.75} viewBox="0 0 70 52" fill="none" className={className}>
+    <rect x="8" y="4" width="50" height="40" rx="4" stroke={color} strokeWidth="1.4" strokeOpacity="0.75" />
+    <rect x="11" y="7" width="44" height="34" rx="3" stroke={color} strokeWidth="0.5" strokeOpacity="0.3" />
+    <path d="M58 16 Q66 20 66 26 Q66 32 58 36" stroke={color} strokeWidth="1.4" strokeOpacity="0.75" strokeLinecap="round" />
+    <path d="M58 19 Q63 22 63 26 Q63 30 58 33" stroke={color} strokeWidth="0.5" strokeOpacity="0.3" strokeLinecap="round" />
+    <path d="M16 12 Q33 10 50 13" stroke={color} strokeWidth="0.5" strokeOpacity="0.2" strokeLinecap="round" />
+    <path d="M14 20 Q33 18 52 21" stroke={color} strokeWidth="0.4" strokeOpacity="0.18" strokeLinecap="round" />
+    <path d="M16 28 Q33 26 50 29" stroke={color} strokeWidth="0.5" strokeOpacity="0.2" strokeLinecap="round" />
+    <path d="M18 36 Q33 34 48 37" stroke={color} strokeWidth="0.4" strokeOpacity="0.15" strokeLinecap="round" />
+    <circle cx="20" cy="24" r="3.5" stroke={color} strokeWidth="1" strokeOpacity="0.5" />
+  </svg>
+);
+
+// ── 9. CONJUNTO DE UTENSÍLIOS (Sketch) ───────────────────────────────
+export const UtensilsSketch: React.FC<{ size?: number; color?: string; className?: string }> = ({ size = 40, color = '#6B2D3E', className = '' }) => (
+  <svg width={size * 0.7} height={size} viewBox="0 0 42 70" fill="none" className={className}>
+    {/* Colher */}
+    <ellipse cx="8" cy="10" rx="5.5" ry="7" stroke={color} strokeWidth="1.2" strokeOpacity="0.7" />
+    <path d="M8 17 Q7.5 38 8 60" stroke={color} strokeWidth="1.2" strokeOpacity="0.7" strokeLinecap="round" />
+    {/* Garfo */}
+    <path d="M21 4 L21 18" stroke={color} strokeWidth="1.2" strokeOpacity="0.7" strokeLinecap="round" />
+    <path d="M18 4 L18 14" stroke={color} strokeWidth="1" strokeOpacity="0.6" strokeLinecap="round" />
+    <path d="M24 4 L24 14" stroke={color} strokeWidth="1" strokeOpacity="0.6" strokeLinecap="round" />
+    <path d="M18 14 Q21 18 24 14" stroke={color} strokeWidth="1" strokeOpacity="0.6" />
+    <path d="M21 18 Q20.5 38 21 60" stroke={color} strokeWidth="1.2" strokeOpacity="0.7" strokeLinecap="round" />
+    {/* Espátula */}
+    <rect x="30" y="4" width="8" height="12" rx="2" stroke={color} strokeWidth="1.2" strokeOpacity="0.7" />
+    <path d="M34 16 Q33.5 38 34 60" stroke={color} strokeWidth="1.2" strokeOpacity="0.7" strokeLinecap="round" />
+    <path d="M32 8 L36 8 M32 11 L36 11" stroke={color} strokeWidth="0.4" strokeOpacity="0.3" />
+  </svg>
+);
+
+
 export const VintageArabesco: React.FC<{ size?: number; color?: string; className?: string }> = ({ size = 60, color = '#B89947', className = '' }) => (
   <svg width={size} height={size * 0.4} viewBox="0 0 100 40" className={className}>
     <path d="M10 20 Q30 5 50 20 T90 20" fill="none" stroke={color} strokeWidth="1" opacity="0.6" />
