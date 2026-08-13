@@ -216,7 +216,7 @@ export default function Gallery() {
             "E assim, a princesa começou a preparar seu castelo
             <br className="hidden md:block" />
             para viver o seu tão esperado{' '}
-            <span style={{ color: '#C9A86A' }}>felizes para sempre</span>." 🤍
+            <span style={{ color: '#C9A86A' }}>felizes para sempre</span>."
           </p>
           <Crown size={28} color="#C9A86A" className="mx-auto mt-6 opacity-60" />
         </motion.div>

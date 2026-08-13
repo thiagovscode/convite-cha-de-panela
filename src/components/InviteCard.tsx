@@ -51,9 +51,7 @@ export default function InviteCard() {
             preparou mais um capítulo especial..."
           </p>
           <div className="flex items-center justify-center gap-3 mt-6">
-            <div className="h-px w-20" style={{ background: 'linear-gradient(to right, transparent, #C9A86A)' }} />
-            <span style={{ color: '#F2B8C6', fontSize: '1.2rem' }}>✿</span>
-            <div className="h-px w-20" style={{ background: 'linear-gradient(to left, transparent, #C9A86A)' }} />
+            <div className="h-px w-32" style={{ background: 'linear-gradient(to right, transparent, #C9A86A, transparent)' }} />
           </div>
         </motion.div>
 
@@ -115,7 +113,7 @@ export default function InviteCard() {
             className="font-serif text-base italic text-marrom/50 mb-8"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           >
-            — onde cada presente ajuda a montar o castelo 👑🍽️ —
+            — onde cada presente ajuda a montar o castelo —
           </p>
 
           <OrnamentalDivider className="mb-8 max-w-[160px] mx-auto" />
@@ -134,11 +132,9 @@ export default function InviteCard() {
             </p>
           </div>
 
-          {/* Separador floral */}
+          {/* Separador */}
           <div className="flex items-center justify-center gap-3 my-5">
-            <div className="h-px w-12" style={{ background: 'linear-gradient(to right, transparent, rgba(201,168,106,0.5))' }} />
-            <span style={{ color: '#F9C5D1', fontSize: '0.9rem' }}>✿</span>
-            <div className="h-px w-12" style={{ background: 'linear-gradient(to left, transparent, rgba(201,168,106,0.5))' }} />
+            <div className="h-px w-24" style={{ background: 'linear-gradient(to right, transparent, rgba(201,168,106,0.5), transparent)' }} />
           </div>
 
           {/* Local */}
@@ -191,7 +187,7 @@ export default function InviteCard() {
         >
           "Porque toda boa história fica ainda mais bonita
           <br className="hidden sm:block" />
-          quando contada entre amigas." 🤍
+          quando contada entre amigas."
         </motion.p>
 
       </div>
