@@ -6,7 +6,7 @@
 import { motion } from 'framer-motion';
 import { conviteConfig } from '../config/convite';
 import PhotoFrame from './PhotoFrame';
-import { HeartIcon, OrnamentalDivider, FlowerOrnament, ArabescoLeft, ArabescoRight } from './DecorativeElements';
+import { HeartIcon, OrnamentalDivider, ArabescoLeft, ArabescoRight } from './DecorativeElements';
 
 export default function MessageSection() {
   const cfg = conviteConfig; // ← vem do config/convite.ts
@@ -24,23 +24,7 @@ export default function MessageSection() {
         }}
       />
 
-      {/* Flor decorativa — canto superior esquerdo */}
-      <motion.div
-        className="absolute top-8 left-6 opacity-20"
-        animate={{ rotate: [0, 10, -5, 0] }}
-        transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <FlowerOrnament size={60} color="#C9A86A" />
-      </motion.div>
-
-      {/* Flor decorativa — canto inferior direito */}
-      <motion.div
-        className="absolute bottom-8 right-6 opacity-20"
-        animate={{ rotate: [0, -8, 5, 0] }}
-        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-      >
-        <FlowerOrnament size={80} color="#E8B7B7" />
-      </motion.div>
+      {/* Flores decorativas removidas para usar os elementos flutuantes globais */}
 
       <div className="relative z-10 max-w-4xl mx-auto">
 

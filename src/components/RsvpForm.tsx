@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { OrnamentalDivider, FlowerOrnament } from './DecorativeElements';
+import { OrnamentalDivider, Crown } from './DecorativeElements';
 
 const API_BASE = import.meta.env.VITE_API_URL || '';
 
@@ -44,7 +44,7 @@ export default function RsvpForm() {
   if (success) {
     return (
       <section className="py-16 px-4 bg-creme flex flex-col items-center justify-center text-center">
-        <FlowerOrnament size={40} className="mb-4" />
+        <Crown size={40} color="#C9A86A" className="mb-4 opacity-80" />
         <h2 className="font-serif text-3xl text-marrom mb-4">Obrigado!</h2>
         <p className="font-sans text-marrom/80 max-w-md">
           {confirmed 

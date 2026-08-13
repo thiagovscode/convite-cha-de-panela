@@ -6,7 +6,7 @@
 import { motion } from 'framer-motion';
 import { conviteConfig } from '../config/convite';
 import type { GaleriaItem } from '../types';
-import { OrnamentalDivider, Crown, FlowerOrnament } from './DecorativeElements';
+import { OrnamentalDivider, Crown } from './DecorativeElements';
 
 // ── FOTO COM MOLDURA POLAROID ────────────────────────────────
 interface StoryPhotoProps {
@@ -137,7 +137,7 @@ function ChapterSeparator() {
       className="flex items-center justify-center gap-4 py-4"
     >
       <div className="h-px flex-1 max-w-[120px]" style={{ background: 'linear-gradient(to right, transparent, #C9A86A)' }} />
-      <FlowerOrnament size={20} color="#C9A86A" />
+      <div className="text-dourado opacity-60">✦</div>
       <div className="h-px flex-1 max-w-[120px]" style={{ background: 'linear-gradient(to left, transparent, #C9A86A)' }} />
     </motion.div>
   );
@@ -152,13 +152,7 @@ export default function Gallery() {
       className="relative py-24 px-4 overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #FDF5F5 0%, #F8F1E8 100%)' }}
     >
-      {/* Flores de fundo decorativas */}
-      <div className="absolute left-4 top-10 opacity-10 pointer-events-none">
-        <FlowerOrnament size={120} color="#E8B7B7" />
-      </div>
-      <div className="absolute right-4 bottom-10 opacity-10 pointer-events-none">
-        <FlowerOrnament size={90} color="#C9A86A" />
-      </div>
+      {/* Flores de fundo decorativas foram removidas para usar apenas FloatingElements */}
 
       <div className="relative z-10 max-w-4xl mx-auto">
 

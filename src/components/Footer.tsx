@@ -5,7 +5,7 @@
 
 import { motion } from 'framer-motion';
 import { conviteConfig } from '../config/convite';
-import { Crown, OrnamentalDivider, FlowerOrnament, HeartIcon, StarSparkle } from './DecorativeElements';
+import { Crown, OrnamentalDivider, HeartIcon, StarSparkle } from './DecorativeElements';
 
 export default function Footer() {
   const cfg = conviteConfig; // ← vem do config/convite.ts
@@ -19,11 +19,7 @@ export default function Footer() {
       }}
     >
       {/* Elementos decorativos de fundo */}
-      <div className="absolute left-4 bottom-4 opacity-10">
-        <FlowerOrnament size={120} color="#C9A86A" />
-      </div>
-      <div className="absolute right-6 top-4 opacity-10">
-        <FlowerOrnament size={80} color="#E8B7B7" />
+      <div className="absolute top-0 right-0 opacity-10 pointer-events-none overflow-hidden">
       </div>
 
       {/* Flutuantes */}

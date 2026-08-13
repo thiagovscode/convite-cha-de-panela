@@ -6,7 +6,7 @@
 
 import { motion } from 'framer-motion';
 import { conviteConfig } from '../config/convite';
-import { OrnamentalDivider, Crown, FlowerOrnament } from './DecorativeElements';
+import { OrnamentalDivider, Crown } from './DecorativeElements';
 
 export default function InviteCard() {
   const cfg = conviteConfig;
@@ -16,21 +16,7 @@ export default function InviteCard() {
       className="relative py-20 px-4 overflow-hidden"
       style={{ background: 'linear-gradient(160deg, #FCE4EC 0%, #FFF5F7 60%, #FCE4EC 100%)' }}
     >
-      {/* Flores decorativas de fundo */}
-      <motion.div
-        className="absolute top-6 left-4 opacity-15 pointer-events-none"
-        animate={{ rotate: [0, 8, -4, 0] }}
-        transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <FlowerOrnament size={90} color="#F2B8C6" />
-      </motion.div>
-      <motion.div
-        className="absolute bottom-6 right-4 opacity-15 pointer-events-none"
-        animate={{ rotate: [0, -6, 4, 0] }}
-        transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-      >
-        <FlowerOrnament size={110} color="#C9A86A" />
-      </motion.div>
+      {/* Flores decorativas de fundo removidas para usar os elementos flutuantes globais */}
 
       <div className="relative z-10 max-w-2xl mx-auto">
 

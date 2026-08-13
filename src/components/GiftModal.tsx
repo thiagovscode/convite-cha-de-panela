@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { Presente } from '../types';
 import { HeartIcon } from './DecorativeElements';
-import { Crown, FlowerOrnament } from './DecorativeElements';
+import { Crown } from './DecorativeElements';
 
 interface GiftModalProps {
   presente: Presente | null;
@@ -101,13 +101,7 @@ export default function GiftModal({
                   borderBottom: '1px solid rgba(184, 153, 71, 0.3)',
                 }}
               >
-                {/* Decoração de canto */}
-                <div className="absolute top-3 left-3 opacity-20">
-                  <FlowerOrnament size={30} color="#C9A86A" />
-                </div>
-                <div className="absolute top-3 right-3 opacity-20">
-                  <FlowerOrnament size={30} color="#E8B7B7" />
-                </div>
+                {/* Decoração de canto removida */}
 
                 <Crown size={32} color="#C9A86A" className="mb-2 opacity-70" />
 
