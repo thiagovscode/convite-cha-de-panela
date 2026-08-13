@@ -33,7 +33,7 @@ const floatingItems: FloatingItem[] = [
 
 export default function FloatingElements() {
   return (
-    <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div className="fixed inset-0 pointer-events-none z-20 overflow-hidden">
       {floatingItems.map((item) => (
         <motion.div
           key={item.id}
