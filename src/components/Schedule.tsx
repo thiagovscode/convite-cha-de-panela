@@ -5,7 +5,7 @@
 
 import { motion } from 'framer-motion';
 import { conviteConfig } from '../config/convite';
-import { OrnamentalDivider, HeraldricStar, GenoviaPostageStamp, PearSketch } from './DecorativeElements';
+import { OrnamentalDivider, HeraldricStar, GenoviaPostageStamp, PotSketch } from './DecorativeElements';
 
 export default function Schedule() {
   const cfg = conviteConfig; // ← vem do config/convite.ts
@@ -135,7 +135,7 @@ export default function Schedule() {
             <GenoviaPostageStamp size={60} rotation={-15} />
           </div>
           <div className="absolute bottom-1/4 right-4 md:right-12 opacity-30 z-0">
-            <PearSketch size={45} color="#B89947" />
+            <PotSketch size={45} color="#B89947" />
           </div>
         </div>
       </div>
