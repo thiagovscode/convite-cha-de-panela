@@ -22,8 +22,6 @@ import AdminPanel from './components/AdminPanel';
 
 import RsvpForm from './components/RsvpForm';
 
-import { SpoonSketch, PotSketch, CuttingBoardSketch, UtensilsSketch } from './components/DecorativeElements';
-
 // Separador entre seções
 function SectionDivider() {
   return (
