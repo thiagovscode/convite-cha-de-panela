@@ -6,6 +6,7 @@
 import { motion } from 'framer-motion';
 import { conviteConfig } from '../config/convite';
 import { OrnamentalDivider, HeraldricStar, GenoviaPostageStamp, PotSketch } from './DecorativeElements';
+import FloatingElements from './FloatingElements';
 
 export default function Schedule() {
   const cfg = conviteConfig; // ← vem do config/convite.ts
@@ -14,6 +15,7 @@ export default function Schedule() {
     <section
       className="relative py-24 px-4 overflow-hidden bg-diary-page"
     >
+      <FloatingElements />
       <div className="relative z-10 max-w-4xl mx-auto">
 
         {/* ── CABEÇALHO ───────────────────────────────────── */}

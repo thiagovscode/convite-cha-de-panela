@@ -12,6 +12,7 @@ import {
   GenoviaPostageStamp,
   RoyalWaxSeal
 } from './DecorativeElements';
+import FloatingElements from './FloatingElements';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 15 },
@@ -27,6 +28,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-20 bg-diary-page">
+      <FloatingElements />
       
       {/* ── MOLDURA DA PÁGINA (Vignette e Borda) ──────────── */}
       <div className="vignette-overlay" />

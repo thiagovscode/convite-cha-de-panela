@@ -7,6 +7,7 @@
 import { motion } from 'framer-motion';
 import { conviteConfig } from '../config/convite';
 import { OrnamentalDivider, Crown } from './DecorativeElements';
+import FloatingElements from './FloatingElements';
 
 export default function InviteCard() {
   const cfg = conviteConfig;
@@ -16,6 +17,7 @@ export default function InviteCard() {
       className="relative py-20 px-4 overflow-hidden"
       style={{ background: 'linear-gradient(160deg, #FCE4EC 0%, #FFF5F7 60%, #FCE4EC 100%)' }}
     >
+      <FloatingElements />
       {/* Flores decorativas de fundo removidas para usar os elementos flutuantes globais */}
 
       <div className="relative z-10 max-w-2xl mx-auto">

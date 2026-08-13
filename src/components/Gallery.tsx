@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { conviteConfig } from '../config/convite';
 import type { GaleriaItem } from '../types';
 import { OrnamentalDivider, Crown } from './DecorativeElements';
+import FloatingElements from './FloatingElements';
 
 // ── FOTO COM MOLDURA POLAROID ────────────────────────────────
 interface StoryPhotoProps {
@@ -152,6 +153,7 @@ export default function Gallery() {
       className="relative py-24 px-4 overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #FDF5F5 0%, #F8F1E8 100%)' }}
     >
+      <FloatingElements />
       {/* Flores de fundo decorativas foram removidas para usar apenas FloatingElements */}
 
       <div className="relative z-10 max-w-4xl mx-auto">

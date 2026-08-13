@@ -8,6 +8,7 @@ import { conviteConfig } from '../config/convite';
 import { useGifts } from '../hooks/useGifts';
 import GiftCard from './GiftCard';
 import GiftModal from './GiftModal';
+import FloatingElements from './FloatingElements';
 import { OrnamentalDivider, Crown } from './DecorativeElements';
 import type { Categoria } from '../types';
 
@@ -47,6 +48,7 @@ export default function GiftList() {
       id="presentes"
       className="relative py-24 px-4 overflow-hidden bg-diary-page"
     >
+      <FloatingElements />
       <div className="relative z-10 max-w-5xl mx-auto">
 
         {/* ── CABEÇALHO ───────────────────────────────────── */}

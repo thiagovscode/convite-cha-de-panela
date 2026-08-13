@@ -6,7 +6,6 @@
 //    src/config/convite.ts
 // ============================================================
 
-import FloatingElements from './components/FloatingElements';
 import Hero from './components/Hero';
 import InviteCard from './components/InviteCard';
 
@@ -48,9 +47,6 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-creme overflow-x-hidden">
-
-      {/* Elementos flutuantes ao fundo (discretos) */}
-      <FloatingElements />
 
       {/* ── SEÇÃO 1: HERO ──────────────────────────────────── */}
       <Hero />

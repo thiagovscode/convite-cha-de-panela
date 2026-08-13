@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { conviteConfig } from '../config/convite';
 import PhotoFrame from './PhotoFrame';
 import { HeartIcon, OrnamentalDivider, ArabescoLeft, ArabescoRight } from './DecorativeElements';
+import FloatingElements from './FloatingElements';
 
 export default function MessageSection() {
   const cfg = conviteConfig; // ← vem do config/convite.ts
@@ -16,6 +17,7 @@ export default function MessageSection() {
       className="relative py-24 px-4 overflow-hidden"
       style={{ background: 'linear-gradient(160deg, #FDF0F0 0%, #F8F1E8 50%, #FDF5F5 100%)' }}
     >
+      <FloatingElements />
       {/* Background texture lines — estilo papel */}
       <div className="absolute inset-0 opacity-[0.03]"
         style={{

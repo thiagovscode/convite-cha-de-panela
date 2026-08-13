@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { OrnamentalDivider, Crown } from './DecorativeElements';
+import FloatingElements from './FloatingElements';
 
 const API_BASE = import.meta.env.VITE_API_URL || '';
 
@@ -43,7 +44,8 @@ export default function RsvpForm() {
 
   if (success) {
     return (
-      <section className="py-16 px-4 bg-creme flex flex-col items-center justify-center text-center">
+      <section id="rsvp" className="relative py-24 px-4 bg-creme overflow-hidden flex flex-col items-center justify-center text-center">
+        <FloatingElements />
         <Crown size={40} color="#C9A86A" className="mb-4 opacity-80" />
         <h2 className="font-serif text-3xl text-marrom mb-4">Obrigado!</h2>
         <p className="font-sans text-marrom/80 max-w-md">
@@ -56,8 +58,9 @@ export default function RsvpForm() {
   }
 
   return (
-    <section className="py-16 px-4 sm:px-8 bg-creme flex flex-col items-center">
-      <div className="max-w-2xl w-full flex flex-col items-center">
+    <section className="relative py-16 px-4 sm:px-8 bg-creme flex flex-col items-center overflow-hidden">
+      <FloatingElements />
+      <div className="relative z-10 max-w-2xl w-full flex flex-col items-center">
         <h2 className="font-serif text-3xl sm:text-4xl text-marrom text-center mb-2">
           R.S.V.P
         </h2>
