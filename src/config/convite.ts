@@ -6,7 +6,7 @@
 //  tocar em nenhum componente.
 // ============================================================
 
-import type { ConviteConfig } from '../types';
+import type { ConviteConfig, GaleriaItem } from '../types';
 
 // ────────────────────────────────────────────────────────────
 //  ALTERE AQUI AS INFORMAÇÕES DO CONVITE
@@ -16,8 +16,8 @@ export const conviteConfig: ConviteConfig = {
   // ── INFORMAÇÕES PESSOAIS ────────────────────────────────
   noiva: 'Tai',
   casal: 'Tai & Amor',
-  titulo: 'O Diário da Noiva',
-  subtitulo: '"Welcome to Genovia"',
+  titulo: 'O Diário da Princesa',
+  subtitulo: '"Uma história escrita por Deus"',
 
   // ── DATA E HORÁRIO ──────────────────────────────────────
   data: 'XX de XXXXX de 2026',
@@ -34,16 +34,53 @@ export const conviteConfig: ConviteConfig = {
   fotoNoiva: './images/noiva.jpg',
   fotoCasal: './images/casal.jpg',
   galeria: [
-    './images/foto1.jpg',
-    './images/foto2.jpg',
-    './images/foto3.jpg',
-    './images/foto4.jpg',
+    {
+      src: './images/foto1.jpg',
+      capitulo: 'Capítulo I',
+      texto: 'Era uma vez uma princesa que vivia em um pequeno vilarejo no estado de Minas Gerais, onde nasceu, cresceu e viveu os primeiros capítulos de sua história. 👑',
+      transicao: 'Mas Deus já tinha preparado o próximo capítulo...',
+    },
+    {
+      src: './images/foto2.jpg',
+      capitulo: 'Capítulo II',
+      texto: 'Deus decidiu escrever um novo capítulo e levou a princesa, junto de sua família, para uma grande cidade chamada São Paulo. ✨',
+      transicao: 'Porque algumas histórias são escritas antes mesmo de serem vividas...',
+    },
+    {
+      src: './images/foto3.jpg',
+      capitulo: 'Capítulo III',
+      texto: 'E o que a princesa ainda não sabia era que, naquela nova terra, Deus já havia preparado alguém muito especial para ela. Tudo estava escrito. Só faltava o momento certo. 🤍',
+      transicao: 'E pelas mãos de Deus, dois caminhos se encontraram...',
+    },
+    {
+      src: './images/foto4.jpg',
+      capitulo: 'Capítulo IV',
+      texto: 'E então, no tempo perfeito de Deus, o príncipe encontrou sua princesa e lhe fez a mais importante das perguntas. Ela, com o coração cheio de alegria, respondeu: SIM! 💍',
+      transicao: 'E assim começou um novo capítulo dessa história...',
+    },
+    {
+      src: './images/foto5.jpg',
+      capitulo: 'Capítulo V',
+      texto: 'Depois do "felizes para sempre" começar a tomar forma, veio um novo tempo: o tempo dos preparativos. E a princesa descobriu que planejar um casamento é quase tão mágico quanto o próprio conto. 🌸',
+      transicao: 'Mas Deus ainda guardava uma surpresa...',
+    },
+    {
+      src: './images/foto6.jpg',
+      capitulo: 'Capítulo VI',
+      texto: 'Foi durante os preparativos que a princesa descobriu que existem coisas muito mais importantes do que vestidos e sapatos... 👀',
+      transicao: 'Como, por exemplo...',
+    },
+    {
+      src: './images/foto7.jpg',
+      capitulo: 'Capítulo VII',
+      texto: '...escolher as louças reais para o seu futuro castelo! 👑🍽️ E assim, entre sonhos e muitas panelas, a princesa começou a preparar o lar onde viveria o seu tão esperado "felizes para sempre".',
+    },
   ],
 
   // ── TEXTOS ──────────────────────────────────────────────
-  fraseHero: 'VOCÊ ESTÁ CONVIDADA PARA O EVENTO REAL',
+  fraseHero: 'Era uma vez...',
   mensagem:
-    'Como diria a Rainha Clarisse: "Uma rainha nunca se atrasa, todos os outros é que estão simplesmente adiantados." Antes do grande dia, vamos celebrar juntas essa nova fase com um chá muito especial. Prometemos que a segurança foi inspecionada pelo Joe, o Fat Louie está descansando e não serviremos peras!',
+    'Deus é um escritor muito criativo. Cada capítulo da nossa história foi escrito por Ele com tanto cuidado, tanto amor... que só nos resta virar a página e descobrir o que vem a seguir. ✨',
   tituloMensagem: 'Querido Diário...',
   tituloLocalizacao: 'ONDE VAMOS NOS ENCONTRAR?',
   tituloPresentes: 'Presentes para a nova casa',
@@ -51,12 +88,12 @@ export const conviteConfig: ConviteConfig = {
 
   // ── CORES DO TEMA ───────────────────────────────────────
   cores: {
-    principal: '#E8B7B7',
-    rosaClaro: '#F2CACA',
-    creme: '#F8F1E8',
+    principal: '#F2B8C6',   // rosa médio delicado
+    rosaClaro: '#FCE4EC',   // blush clarinho
+    creme: '#FFF5F7',       // branco rosado
     branco: '#FFFFFF',
     dourado: '#C9A86A',
-    texto: '#4A3030',
+    texto: '#6B2D3E',       // bordô/vinho para textos
   },
 
   // ── PALETA DE CORES DOS PRESENTES ───────────────────────

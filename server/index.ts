@@ -81,4 +81,10 @@ process.on('SIGTERM', async () => {
   process.exit(0);
 });
 
-start();
+// Apenas inicia o servidor se não estiver rodando no Vercel
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
+  start();
+}
+
+// Exporta o app para o Vercel Serverless Functions
+export default app;

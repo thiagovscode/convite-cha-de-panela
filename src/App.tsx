@@ -8,12 +8,13 @@
 
 import FloatingElements from './components/FloatingElements';
 import Hero from './components/Hero';
+import InviteCard from './components/InviteCard';
 import LocationSection from './components/LocationSection';
 import MessageSection from './components/MessageSection';
 import GiftInstructions from './components/GiftInstructions';
 import ColorPalette from './components/ColorPalette';
 import GiftList from './components/GiftList';
-import Schedule from './components/Schedule';
+
 import Gallery from './components/Gallery';
 import Footer from './components/Footer';
 
@@ -61,33 +62,31 @@ function App() {
 
       <SectionDivider />
 
-      {/* ── SEÇÃO 3: LOCALIZAÇÃO E RSVP ────────────────────── */}
-      <LocationSection />
-      
+      {/* ── SEÇÃO 3: HISTÓRIA (CONTO DE FADAS) ─────────────── */}
+      <Gallery />
+
+      <SectionDivider />
+
+      {/* ── SEÇÃO 4: CARTÃO DE CONVITE (após a história) ───── */}
+      <InviteCard />
+
+      <SectionDivider />
+
+      {/* ── SEÇÃO 5: RSVP ───────────────────────────────────── */}
       <RsvpForm />
 
       <SectionDivider />
 
-      {/* ── SEÇÃO 4: PROGRAMAÇÃO ───────────────────────────── */}
-      <Schedule />
-
-      <SectionDivider />
-
-      {/* ── SEÇÃO 5: COMO ESCOLHER O PRESENTE ─────────────── */}
+      {/* ── SEÇÃO 6: COMO ESCOLHER O PRESENTE ─────────────── */}
       <GiftInstructions />
 
-      {/* ── SEÇÃO 6: PALETA DE CORES ───────────────────────── */}
+      {/* ── SEÇÃO 7: PALETA DE CORES ───────────────────────── */}
       <ColorPalette />
 
       <SectionDivider />
 
-      {/* ── SEÇÃO 7: LISTA DE PRESENTES ────────────────────── */}
+      {/* ── SEÇÃO 8: LISTA DE PRESENTES ────────────────────── */}
       <GiftList />
-
-      <SectionDivider />
-
-      {/* ── SEÇÃO 8: GALERIA ───────────────────────────────── */}
-      <Gallery />
 
       <SectionDivider />
 

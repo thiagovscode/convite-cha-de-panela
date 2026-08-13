@@ -45,6 +45,13 @@ export interface CorPresente {
   hex: string;
 }
 
+export interface GaleriaItem {
+  src: string;
+  capitulo: string;   // ex: "Capítulo I"
+  texto: string;      // frase narrativa do conto
+  transicao?: string; // frase de transição entre fotos (opcional)
+}
+
 export interface ConviteConfig {
   // Informações pessoais
   noiva: string;
@@ -64,7 +71,7 @@ export interface ConviteConfig {
   // Fotos
   fotoNoiva: string;
   fotoCasal: string;
-  galeria: string[];
+  galeria: GaleriaItem[];
 
   // Textos
   mensagem: string;

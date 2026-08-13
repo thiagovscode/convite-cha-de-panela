@@ -9,21 +9,22 @@ export default {
       // ── PALETA DE CORES DO CONVITE ───────────────────────
       colors: {
         rosa: {
-          DEFAULT: '#E8B7B7',
-          claro: '#F2CACA',
-          antigo: '#C49A9A',
-          escuro: '#B08080',
+          DEFAULT: '#F2B8C6',    // rosa médio delicado
+          claro: '#FCE4EC',      // blush clarinho
+          petala: '#F9C5D1',     // rosa pétalas
+          antigo: '#E48FA5',     // rosa mais saturado
+          escuro: '#D4607E',     // rosa escuro
         },
-        creme: '#F8F1E8',
+        creme: '#FFF5F7',        // branco rosado
         dourado: {
           DEFAULT: '#C9A86A',
           claro: '#DFC088',
           escuro: '#A8834A',
         },
         marrom: {
-          DEFAULT: '#4A3030',
-          claro: '#6B4A4A',
-          escuro: '#2D1A1A',
+          DEFAULT: '#6B2D3E',    // bordô/vinho — agora mais rosado
+          claro: '#8B4D5E',
+          escuro: '#4A1525',
         },
       },
       // ── FONTES ──────────────────────────────────────────

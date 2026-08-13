@@ -9,14 +9,15 @@
    ============================================================ */
 
 :root {
-  /* Paleta Envelhecida e Aristocrática */
-  --rosa: #D4B4B4;          /* Rosa Antigo Seco */
-  --rosa-claro: #E8D4D4;    /* Rosa muito claro, quase creme */
-  --creme: #FDF9F1;         /* Creme amarelado de papel antigo */
-  --papel-escuro: #EFE6D5;  /* Sombra de papel */
-  --dourado: #B89947;       /* Dourado envelhecido */
-  --dourado-claro: #D4BE7D;
-  --marrom: #3A2626;        /* Tinta sépia/marrom escuro */
+  /* Paleta Rosa Blush — Conto de Fadas */
+  --rosa: #F2B8C6;           /* Rosa médio delicado */
+  --rosa-claro: #FCE4EC;     /* Blush bem clarinho */
+  --rosa-petala: #F9C5D1;    /* Rosa pétalas */
+  --creme: #FFF5F7;          /* Branco levemente rosado */
+  --papel-escuro: #FFE4EC;   /* Rosa suave para fundos alternativos */
+  --dourado: #C9A86A;        /* Dourado quente — mantido */
+  --dourado-claro: #DFC088;
+  --marrom: #6B2D3E;         /* Bordô/vinho escuro para textos */
   --branco: #FFFFFF;
 }
 
@@ -63,23 +64,23 @@ h1, h2, h3, h4 {
 
 .bg-diary-page {
   background-color: var(--creme);
-  /* Textura de papel envelhecido usando SVG data URI */
   background-image: 
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E"),
-    radial-gradient(circle at 50% 50%, transparent 60%, rgba(58, 38, 38, 0.05) 150%);
-  box-shadow: inset 0 0 80px rgba(58, 38, 38, 0.03);
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E"),
+    radial-gradient(circle at 50% 0%, rgba(242,184,198,0.25) 0%, transparent 70%),
+    radial-gradient(circle at 100% 100%, rgba(249,197,209,0.15) 0%, transparent 60%);
+  box-shadow: inset 0 0 80px rgba(107,45,62,0.03);
 }
 
 .bg-paper-dark {
   background-color: var(--papel-escuro);
 }
 
-/* Efeito de borda queimada/escurecida (Vignette) */
+/* Efeito vignette rosado */
 .vignette-overlay {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(circle at 50% 50%, transparent 40%, rgba(58, 38, 38, 0.08) 100%);
+  background: radial-gradient(circle at 50% 50%, transparent 40%, rgba(242,184,198,0.12) 100%);
   z-index: 10;
 }
 
@@ -125,32 +126,32 @@ h1, h2, h3, h4 {
 /* ── BOTÕES ─────────────────────────────────────────────── */
 
 .btn-primary {
-  background: linear-gradient(135deg, #E8D4D4, #FDF9F1);
+  background: linear-gradient(135deg, #F9C5D1, #FCE4EC);
   color: var(--marrom);
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   padding: 0.875rem 2.5rem;
-  border-radius: 2px; /* Mais vintage, menos arredondado */
+  border-radius: 2px;
   border: 1px solid var(--dourado-claro);
   transition: all 0.3s ease;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 2px 2px 0px rgba(184, 153, 71, 0.2);
+  box-shadow: 2px 2px 0px rgba(201,168,106,0.25);
 }
 
 .btn-primary:hover {
   transform: translate(-1px, -1px);
-  box-shadow: 3px 3px 0px rgba(184, 153, 71, 0.3);
-  background: linear-gradient(135deg, #FDF9F1, #E8D4D4);
+  box-shadow: 3px 3px 0px rgba(201,168,106,0.35);
+  background: linear-gradient(135deg, #FCE4EC, #F9C5D1);
 }
 
 .btn-primary:active {
   transform: translate(1px, 1px);
-  box-shadow: 1px 1px 0px rgba(184, 153, 71, 0.2);
+  box-shadow: 1px 1px 0px rgba(201,168,106,0.2);
 }
 
 /* ── MODAL ──────────────────────────────────────────────── */
@@ -167,17 +168,17 @@ h1, h2, h3, h4 {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--papel-escuro);
+  background: var(--rosa-claro);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--dourado-claro);
+  background: var(--rosa);
   border-radius: 3px;
 }
 
 /* ── SELEÇÃO ────────────────────────────────────────────── */
 
 ::selection {
-  background-color: rgba(184, 153, 71, 0.3);
+  background-color: rgba(242,184,198,0.4);
   color: var(--marrom);
 }
 
