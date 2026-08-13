@@ -281,7 +281,7 @@ export const Crown: React.FC<{ size?: number; color?: string; className?: string
   </svg>
 );
 export const OrnamentalDivider = VintageArabesco;
-export const FlowerOrnament = PearSketch;
+export const FlowerOrnament = PotSketch;
 export const StarSparkle = HeraldricStar;
 export const ArabescoLeft = VintageArabesco;
 export const ArabescoRight = VintageArabesco;
