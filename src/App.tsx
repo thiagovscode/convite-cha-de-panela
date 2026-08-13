@@ -9,7 +9,7 @@
 import FloatingElements from './components/FloatingElements';
 import Hero from './components/Hero';
 import InviteCard from './components/InviteCard';
-import LocationSection from './components/LocationSection';
+
 import MessageSection from './components/MessageSection';
 import GiftInstructions from './components/GiftInstructions';
 import ColorPalette from './components/ColorPalette';

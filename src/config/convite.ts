@@ -6,7 +6,7 @@
 //  tocar em nenhum componente.
 // ============================================================
 
-import type { ConviteConfig, GaleriaItem } from '../types';
+import type { ConviteConfig } from '../types';
 
 // ────────────────────────────────────────────────────────────
 //  ALTERE AQUI AS INFORMAÇÕES DO CONVITE
