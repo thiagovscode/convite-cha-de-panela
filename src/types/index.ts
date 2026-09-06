@@ -10,8 +10,9 @@ export interface Presente {
   cor: string;
   descricao: string;
   linkCompra: string;
-  maxQuantity?: number; // Quantidade máxima permitida. Se undefined, assume 1.
-  esgotado?: boolean;   // Calculado no backend para o frontend não expor números.
+  maxQuantity?: number;             // Quantidade máxima permitida. Se undefined, assume 1.
+  activeReservationsCount?: number; // Contador atual de reservas (vem da API).
+  esgotado?: boolean;               // Calculado no backend para o frontend não expor números.
 }
 
 export interface Reservation {

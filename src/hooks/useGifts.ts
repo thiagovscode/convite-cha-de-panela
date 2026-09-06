@@ -72,6 +72,23 @@ export function useGifts(): UseGiftsReturn {
     fetchPresentes();
   }, [fetchPresentes]);
 
+  // Refetch silencioso ao voltar para a aba — sem requests desnecessárias
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        fetchPresentes();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('focus', fetchPresentes);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('focus', fetchPresentes);
+    };
+  }, [fetchPresentes]);
+
   // ── ABRE O MODAL ─────────────────────────────────────────
   const openModal = useCallback((gift: Presente) => {
     setSelectedGift(gift);
@@ -116,14 +133,18 @@ export function useGifts(): UseGiftsReturn {
         throw new Error(json.error || 'Erro ao reservar presente.');
       }
 
-      // Sucesso
+      // Sucesso — atualiza a lista local imediatamente sem F5
       setIsReserved(true);
-      
-      // Atualiza a listagem localmente se a API retornar que agora está esgotado 
-      // (a API poderia retornar 'esgotado: true' no data se quisesse, mas podemos assumir q foi apenas uma reserva)
-      // Como o usuário não vê números, só marcamos esgotado se a API nos der erro futuro, 
-      // ou atualizamos por refetch depois. Para UX imediata, o modal vai para "Reservado!".
-      
+
+      setPresentes((prev) =>
+        prev.map((p) => {
+          if (p.id !== id) return p;
+          const novaContagem = (p.activeReservationsCount ?? 0) + 1;
+          const esgotado = novaContagem >= (p.maxQuantity ?? 1);
+          return { ...p, activeReservationsCount: novaContagem, esgotado };
+        })
+      );
+
       console.log(`💗 Presente #${id} reservado com sucesso por ${guestName}!`);
 
     } catch (err: any) {
