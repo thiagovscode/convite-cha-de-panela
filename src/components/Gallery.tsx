@@ -146,6 +146,9 @@ function ChapterSeparator() {
 
 // ── COMPONENTE PRINCIPAL ─────────────────────────────────────
 export default function Gallery() {
+  const showGallery = false;
+  if (!showGallery) return null;
+
   const { galeria } = conviteConfig;
 
   return (

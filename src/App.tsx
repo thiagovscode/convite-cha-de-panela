@@ -58,8 +58,10 @@ function App() {
 
       <SectionDivider />
 
-      {/* ── SEÇÃO 3: HISTÓRIA (OCULTA A PEDIDO) ─────────────── */}
-      {/* <Gallery /> */}
+      {/* ── SEÇÃO 3: HISTÓRIA ──────────────────────────────── */}
+      <Gallery />
+
+      <SectionDivider />
 
       {/* ── SEÇÃO 4: CARTÃO DE CONVITE ──────────────────────── */}
       <InviteCard />
