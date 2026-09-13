@@ -20,13 +20,13 @@ export const conviteConfig: ConviteConfig = {
   subtitulo: '"Uma história escrita por Deus"',
 
   // ── DATA E HORÁRIO ──────────────────────────────────────
-  data: 'XX de XXXXX de 2026',
-  horario: 'XXhXX',
+  data: '13-10-2026',
+  horario: '14h',
 
   // ── LOCALIZAÇÃO ─────────────────────────────────────────
-  endereco: 'Rua das Flores, 123 — Salão de Festas',
-  enderecoDetalhes: 'Bairro Jardim, Sua Cidade — SP',
-  linkMaps: 'https://maps.google.com/',
+  endereco: 'Rua dos Coqueiros, 195',
+  enderecoDetalhes: 'Jardim Santo Antônio — Francisco Morato / SP — CEP: 07915-070',
+  linkMaps: 'https://www.google.com/maps/search/?api=1&query=Rua+dos+Coqueiros,+195,+Jardim+Santo+Antonio,+Francisco+Morato+-+SP,+07915-070',
 
   // ── FOTOS ───────────────────────────────────────────────
   //  Coloque as fotos em: public./images/
@@ -78,7 +78,7 @@ export const conviteConfig: ConviteConfig = {
   ],
 
   // ── TEXTOS ──────────────────────────────────────────────
-  fraseHero: 'Era uma vez...',
+  fraseHero: 'Você está sendo convidada para o chá de panela da Tai',
   mensagem:
     'Deus é um escritor muito criativo. Cada capítulo da nossa história foi escrito por Ele com tanto cuidado, tanto amor... que só nos resta virar a página e descobrir o que vem a seguir.',
   tituloMensagem: 'Querido Diário...',

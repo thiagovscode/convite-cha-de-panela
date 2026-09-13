@@ -168,7 +168,7 @@ export default function AdminPanel() {
             </button>
           </form>
           <div className="mt-4 text-center">
-            <a href="/" className="text-xs text-marrom/50 hover:underline">Voltar para o convite</a>
+            <button onClick={() => { window.location.href = window.location.pathname; }} className="text-xs text-marrom/50 hover:underline bg-transparent border-0 cursor-pointer">Voltar para o convite</button>
           </div>
         </div>
       </div>
@@ -333,7 +333,7 @@ export default function AdminPanel() {
         )}
 
         <div className="mt-8 text-center">
-           <a href="/" className="text-sm font-sans text-marrom/50 hover:text-marrom underline transition-colors">Voltar para o Convite</a>
+           <button onClick={() => { window.location.href = window.location.pathname; }} className="text-sm font-sans text-marrom/50 hover:text-marrom underline transition-colors bg-transparent border-0 cursor-pointer">Voltar para o Convite</button>
         </div>
       </div>
     </div>
