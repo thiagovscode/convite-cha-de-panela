@@ -76,7 +76,7 @@ export default function MessageSection() {
                 "
               </span>
               <p
-                className="font-sans text-base leading-8 text-marrom/80 font-light pl-4 italic"
+                className="font-sans text-base leading-8 text-marrom/80 font-light pl-4 italic whitespace-pre-line"
                 style={{ fontStyle: 'italic' }}
               >
                 {cfg.mensagem}

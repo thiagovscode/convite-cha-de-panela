@@ -107,24 +107,6 @@ export default function GiftCard({ presente, onClick }: GiftCardProps) {
           {presente.nome}
         </h3>
 
-        {/* Cor */}
-        <div className="flex items-center gap-1.5 mt-2">
-          <div
-            className="w-3 h-3 rounded-full border border-dourado/30"
-            style={{
-              backgroundColor:
-                presente.cor === 'Branco' ? '#FAFAFA' :
-                presente.cor === 'Rosa' ? '#E8B7B7' :
-                presente.cor === 'Rosa Antigo' ? '#C49A9A' :
-                presente.cor === 'Dourado' ? '#C9A86A' :
-                presente.cor === 'Creme' ? '#F8F1E8' :
-                presente.cor === 'Preto' ? '#2D2D2D' :
-                '#E8B7B7',
-            }}
-          />
-          <span className="font-sans text-xs text-marrom/50 font-light">{presente.cor}</span>
-        </div>
-
         {/* CTA */}
         <div className="mt-3 pt-3 border-t border-rosa/15">
           {isSoldOut ? (

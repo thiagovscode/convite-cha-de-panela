@@ -50,14 +50,6 @@ export default function GiftModal({
 
   if (!presente && !isOpen) return null;
 
-  const corHex =
-    presente?.cor === 'Rosa'      ? '#E8B7B7' :
-    presente?.cor === 'Rosa Antigo'? '#C49A9A' :
-    presente?.cor === 'Dourado'   ? '#C9A86A' :
-    presente?.cor === 'Creme'     ? '#F8F1E8' :
-    presente?.cor === 'Preto'     ? '#2D2D2D' :
-    '#FAFAFA';
-
   const handleReserve = () => {
     if (!guestName.trim() || guestName.trim().length < 2) return;
     onReserve(presente!.id, guestName);
@@ -138,21 +130,6 @@ export default function GiftModal({
                 
                 {/* Textura sutil no fundo */}
                 <div className="absolute inset-0 pointer-events-none opacity-30" style={{ background: 'radial-gradient(circle at center, transparent 50%, rgba(58,38,38,0.05) 100%)' }} />
-
-                <div className="flex items-center gap-2 mb-3 relative z-10">
-                  <div
-                    className="w-4 h-4 rounded-full border border-dourado/30 shadow-sm"
-                    style={{ backgroundColor: corHex }}
-                  />
-                  <span className="font-sans text-xs text-marrom/70">
-                    Cor: <strong>{presente.cor}</strong>
-                  </span>
-                </div>
-
-                <div
-                  className="h-px mb-4"
-                  style={{ background: 'linear-gradient(to right, transparent, rgba(184, 153, 71, 0.4), transparent)' }}
-                />
 
                 <p className="font-sans text-sm leading-6 text-marrom/75 font-light mb-6">
                   {presente.descricao}

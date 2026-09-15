@@ -14,9 +14,9 @@ import type { ConviteConfig } from '../types';
 export const conviteConfig: ConviteConfig = {
 
   // ── INFORMAÇÕES PESSOAIS ────────────────────────────────
-  noiva: 'Tai',
-  casal: 'Tai & Amor',
-  titulo: 'O Diário da Princesa',
+  noiva: 'Tainara',
+  casal: 'Tainara & Thiago',
+  titulo: 'Chá de Panela da Tai',
   subtitulo: '"Uma história escrita por Deus"',
 
   // ── DATA E HORÁRIO ──────────────────────────────────────
@@ -78,9 +78,9 @@ export const conviteConfig: ConviteConfig = {
   ],
 
   // ── TEXTOS ──────────────────────────────────────────────
-  fraseHero: 'Você está sendo convidada para o chá de panela da Tai',
+  fraseHero: 'Você está sendo convidada para o',
   mensagem:
-    'Deus é um escritor muito criativo. Cada capítulo da nossa história foi escrito por Ele com tanto cuidado, tanto amor... que só nos resta virar a página e descobrir o que vem a seguir.',
+    'Dizem que toda princesa sonha em encontrar seu príncipe e viver em um lindo castelo.\nÉ verdade, eu encontrei o meu.\n\nO castelo ainda está em construção...\nmas os sonhos já estão a todo vapor!\n\nE foi então que essa princesa descobriu algo que os contos de fadas nunca contam: existe coisa muito mais emocionante do que comprar bolsas e sapatos...\nComprar louças reais!\n\nAgora, você recebeu uma missão muito importante: participar de um chá digno da realeza e ajudar essa princesa a montar seu tão sonhado castelo.\n\nAfinal, todo príncipe precisa de uma princesa, toda princesa precisa de um castelo… e todo castelo digno de realeza precisa de louças reais!',
   tituloMensagem: 'Querido Diário...',
   tituloLocalizacao: 'ONDE VAMOS NOS ENCONTRAR?',
   tituloPresentes: 'Presentes para a nova casa',
@@ -100,11 +100,11 @@ export const conviteConfig: ConviteConfig = {
   //  Adicione ou remova cores conforme necessário
   coresPresentes: [
     { nome: 'Rosa', hex: '#E8B7B7' },
-    { nome: 'Creme', hex: '#F8F1E8' },
-    { nome: 'Branco', hex: '#FAFAFA' },
+    { nome: 'Inox', hex: '#A8A9AD' },
     { nome: 'Dourado', hex: '#C9A86A' },
-    { nome: 'Rosa Antigo', hex: '#C49A9A' },
+    { nome: 'Creme', hex: '#F8F1E8' },
     { nome: 'Preto', hex: '#2D2D2D' },
+    { nome: 'Branco', hex: '#FFFFFF' },
   ],
 
   // ────────────────────────────────────────────────────────

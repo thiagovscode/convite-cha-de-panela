@@ -8,7 +8,10 @@ import { conviteConfig } from '../config/convite';
 import { OrnamentalDivider } from './DecorativeElements';
 
 export default function ColorPalette() {
-  const { coresPresentes } = conviteConfig; // ← vem do config/convite.ts
+  const showColorPalette = false;
+  if (!showColorPalette) return null;
+
+  const { coresPresentes } = conviteConfig;
 
   return (
     <section
