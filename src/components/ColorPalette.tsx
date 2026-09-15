@@ -8,9 +8,6 @@ import { conviteConfig } from '../config/convite';
 import { OrnamentalDivider } from './DecorativeElements';
 
 export default function ColorPalette() {
-  const showColorPalette = false;
-  if (!showColorPalette) return null;
-
   const { coresPresentes } = conviteConfig;
 
   return (
@@ -33,10 +30,10 @@ export default function ColorPalette() {
             className="font-serif text-3xl sm:text-4xl font-light text-marrom mb-2"
             style={{ fontFamily: "'Cormorant Garamond', Georgia, serif" }}
           >
-            Escolha a sua cor
+            Nossa Paleta de Cores
           </h2>
           <p className="font-sans text-sm text-marrom/60 font-light max-w-xs mx-auto mb-6">
-            Cada presente pode possuir uma cor disponível. Verifique no card do presente.
+            Confira a nossa paleta de cores escolhida para a nossa casa.
           </p>
         </motion.div>
 
