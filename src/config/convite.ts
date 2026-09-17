@@ -14,13 +14,13 @@ import type { ConviteConfig } from '../types';
 export const conviteConfig: ConviteConfig = {
 
   // ── INFORMAÇÕES PESSOAIS ────────────────────────────────
-  noiva: 'Tainara',
-  casal: 'Tainara & Thiago',
+  noiva: 'Tai',
+  casal: 'Tai & Thi',
   titulo: 'Chá de Panela da Tai',
   subtitulo: '"Uma história escrita por Deus"',
 
   // ── DATA E HORÁRIO ──────────────────────────────────────
-  data: '13-10-2026',
+  data: '11-10-2026',
   horario: '14h',
 
   // ── LOCALIZAÇÃO ─────────────────────────────────────────
