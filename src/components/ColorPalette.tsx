@@ -14,7 +14,6 @@ interface CorItem {
 interface GrupoCor {
   titulo: string;
   subtitulo: string;
-  icone: string;
   cores: CorItem[];
 }
 
