@@ -18,8 +18,8 @@ const steps = [
   {
     number: '02',
     icon: <Palette size={32} color="#C9A86A" strokeWidth={1.5} />,
-    title: 'Confira a cor disponível',
-    description: 'Cada presente tem uma cor indicada. Verifique se está disponível na paleta.',
+    title: 'Consulte nossa Paleta',
+    description: 'Confira a paleta de cores para escolher o item nas cores permitidas.',
   },
   {
     number: '03',
