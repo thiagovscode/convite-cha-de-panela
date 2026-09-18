@@ -99,12 +99,13 @@ export const conviteConfig: ConviteConfig = {
   // ── PALETA DE CORES DOS PRESENTES ───────────────────────
   //  Adicione ou remova cores conforme necessário
   coresPresentes: [
-    { nome: 'Rosa', hex: '#E8B7B7' },
-    { nome: 'Inox', hex: '#A8A9AD' },
     { nome: 'Dourado', hex: '#C9A86A' },
-    { nome: 'Creme', hex: '#F8F1E8' },
-    { nome: 'Preto', hex: '#2D2D2D' },
     { nome: 'Branco', hex: '#FFFFFF' },
+    { nome: 'Creme', hex: '#F8F1E8' },
+    { nome: 'Rosa', hex: '#E8B7B7' },
+    { nome: 'Verde', hex: '#9CAF88' },
+    { nome: 'Preto', hex: '#2D2D2D' },
+    { nome: 'Inox', hex: '#A8A9AD' },
   ],
 
   // ────────────────────────────────────────────────────────
